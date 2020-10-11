@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/dao/LoginDao.java=UTF-8
+encoding//src/dao/ReserveDao.java=UTF-8
+encoding//src/dao/RoomCountDao.java=UTF-8
+encoding//src/domain/Reserve.java=UTF-8
+encoding//src/service/LoginService.java=UTF-8
+encoding//src/service/ReserveService.java=UTF-8
+encoding//src/service/RoomCountService.java=UTF-8
+encoding/<project>=UTF-8

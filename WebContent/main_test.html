@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<!--
+	Horizons by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>월드 리조트에 오신 것을 환영 합니다.</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	<style type="text/css">   
+   /* banner */
+   .slide {position: relative; width: 1850px; height: 600px; margin:0 auto; padding:0; overflow: hidden;}
+   .slide ul {position: absolute; margin: 0px; padding:0; list-style: none; }
+   .slide ul li {float: left; width: 1850px; height: 600px; margin:0; padding:0;}
+
+   h2{
+   position:absolute;
+   top:200px;
+   left:150px;
+   width:100%}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script language="JavaScript">
+   $(document).ready(function() {
+      var $slide = $(".slide").find("ul");
+
+      var $slideWidth = $slide.children().outerWidth();//이미지의 폭
+      var $slideHeight = $slide.children().outerHeight(); // 높이
+      var $length = $slide.children().length;//이미지의 갯수
+      var rollingId;
+
+      //정해진 초마다 함수 실행
+      rollingId = setInterval(function() { rollingStart(); }, 3500);//다음 이미지로 롤링 애니메이션 할 시간차
+    
+      function rollingStart() {
+         $slide.css("width", $slideWidth * $length + "px");
+         $slide.css("height", $slideHeight + "px");
+         //alert(bannerHeight);
+         //배너의 좌측 위치를 옮겨 준다.
+         $slide.animate({left: - $slideWidth + "px"}, 1800, function() { //숫자는 롤링 진행되는 시간이다.
+            //첫번째 이미지를 마지막 끝에 복사(이동이 아니라 복사)해서 추가한다.
+            $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+            //뒤로 복사된 첫번재 이미지는 필요 없으니 삭제한다.
+            $(this).find("li:first").remove();
+            //다음 움직임을 위해서 배너 좌측의 위치값을 초기화 한다.
+            $(this).css("left", 0);
+            //이 과정을 반복하면서 계속 롤링하는 배너를 만들 수 있다.
+         });
+      }
+   }); 
+</script>
+	</head>
+	<body class="homepage">
+
+		<!-- Header -->
+			<div id="header">	
+				<div class="slide">      
+         			<ul>         
+            			<li><img src="mainpic1.jpg" width="100%" height="600"></li>
+            			<li><img src="mainpic2.jpg" width="100%" height="600"></li>
+            			<li><img src="mainpic3.jpg" width="100%" height="600" ></li>
+            			<li><img src="mainpic4.jpg" width="100%" height="600"></li>
+            			<li><img src="mainpic5.jpg" width="100%" height="600"></li>
+         			</ul>
+      			</div>
+      		</div>					
+
+		<!-- Featured -->
+			<div class="wrapper style2">
+				<section class="container">
+					<header class="major">
+						<h2>Welcome to World Resort</h2>
+						<span class="byline">월드 리조트에서 특별한 추억을 만들어 보세요!</span>
+					</header>
+					<div class="row no-collapse-1">
+						<section class="4u">
+							<a class="image feature"><img src="images/pic02.jpg" alt=""></a>
+							<p>프라이빗 해변에서 일출을 보면서 즐기는 조식</p>
+						</section>
+						<section class="4u">
+							<a class="image feature"><img src="images/pic03.jpg" alt=""></a>
+							<p>수영장에서 즐기는 특별한 저녁</p>
+						</section>
+						<section class="4u">
+							<a class="image feature"><img src="images/pic04.jpg" alt=""></a>
+							<p>동남아에 온 듯한 비치 뷰 수영장</p>
+						</section>
+	
+					</div>
+				</section>
+			</div>
+			
+		<!-- Footer -->
+			<div id="footer">
+			월드리조트(주) 경기도 성남시 분당구 황새울로 329번길 5(서현동 272-6) (우)13590<br>
+			대표자 : 이대표  Tel: 1111-2222 Fax: 070-0000-0000
+			</div>
+	</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <meta charset="UTF-8">
+      <title>월드 리조트</title>
+<style type='text/css'>
+td{font-size:12; text-align:center;} 
+a:link{text-decoration:none;}
+a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+a:active{text-decoration:none;}
+</style>
+<script language='javascript' type='text/javascript'>
+   var muCnt = 5;
+   function fncShow(pos) {
+      var i = 0;
+      for(i; i < muCnt; i++) {
+         var obj = document.getElementById("menu"+i);
+         var obj2 = document.getElementById("m"+i);
+         if(i == pos) {
+            obj.style.display = '';
+            obj2.style.color = "#000000";
+         } else {
+            obj.style.display = 'none';
+            obj2.style.color = "#000000";
+            
+         }
+   }
+   }
+   function fncHide(pos) {
+      var obj = document.getElementById("menu" + pos);
+      obj.style.display = 'none';
+      }
+   
+</script>
+</head>
+<body>
+<div align=center>
+<table cellpadding = '0' cellspacing = '1' border='0' width='800'>
+<td width='150'><a href='main.jsp' target=main><img src="logo.png" width='140' height='50' border='0'></a>
+</td>
+<td>
+<table cellpadding='0' cellspacing='1' border='0' width='1000' height='60'>
+   <tr height='30'>
+      <td style='text-align:left;' width='60'></td>
+      <td style='text-align:left;' width='150' onmouseover='fncShow(0);' id='m0'><b> 리조트 소개 </b></td>
+      <td style='text-align:left;' width='150' onmouseover='fncShow(1);' id='m1'><b> 찾아오기 </b></td>
+      <td style='text-align:left;' width='150' onmouseover='fncShow(2);' id='m2'><b> 주변 여행지 </b></td>
+      <td style='text-align:left;' width='150' onmouseover='fncShow(3);' id='m3'><b> 예약하기 </b></td>
+      <td style='text-align:left;' width='300' onmouseover='fncShow(4);' id='m4'><b> 리조트 소식 </b></td>
+   </tr>
+   <tr height='30'>
+      <td colspan='6'>
+         <table id='menu0' style='display:none;' cellpadding='0' cellspacing='0' border='0' width='1000' height='30'>
+         <tr>
+            <td width='38'></td>
+            <td width='600' style='text-align:left;'>
+               <a href='main.jsp' target=main>
+               <span>| 월드 리조트</span>
+               </a>
+               <a href='a_01.html' target=main>
+               <span>| 스위트 룸</span>
+               </a>
+               <a href='a_02.html' target=main>
+               <span>| 패밀리 룸</span>
+               </a>
+               <a href='a_03.html' target=main>
+               <span>| 디럭스 룸</span>
+               </a>
+            </td>
+         </tr>   
+</table>
+<table id='menu1' style='display:none;' cellpadding='0' cellspacing='0' width='1000' height='30'>
+   <tr>
+      <td width='140'></td>
+      <td width='500' style='text-align:left;'>
+         <a href='b_01.html' target=main>
+         <span>| 찾아오는 길</span>
+         </a>
+         <a href='b_02.html' target=main>
+         <span>| 대중교통 이용</span>
+         </a>
+         <a href='b_03.html' target=main>
+         <span>| 자가용 이용</span>
+         </a>
+         </td>
+      </tr>   
+</table>
+
+<table id='menu2' style='display:none;' cellpadding='0' cellspacing='0' border='0' width='1000' height='30'>
+   <tr>
+      <td width='240'></td>
+      <td width='400' style='text-align:left;'>
+         <a href='c_01.html' target=main>
+         <span>| 소금산</span>
+         </a>
+         <a href='c_02.html' target=main>
+         <span>| 월드 비치</span>
+         </a>
+         <a href='c_03.html' target=main>
+         <span>| 스파 & 온천</span>
+         </a>
+      </td>
+   </tr>      
+</table>
+<table id='menu3' style='display:none;' cellpadding='0' cellspacing='0' width='1000' height='30'>
+   <tr>
+      <td width='757'></td>
+      <td width='650' style='text-align:left;'>
+         <a href='d_01.jsp' target=main>
+         <span>| 예약상황</span>
+         </a>
+         <a href='d_02.jsp' target=main>
+         <span>| 예약하기</span>
+         </a>
+         <a href='./login_test.jsp' target=main>
+         <span>| 관리자페이지</span>
+         </a>
+         <a href='adm_logout.jsp' target=main>
+         <span>| 관리자로그아웃</span>
+         </a>
+      </td>
+   </tr>      
+</table>
+         
+<table id='menu4' style='display:none;' cellpadding='0' cellspacing='0' width='1000' height='30'>
+   <tr>
+      <td width='350'></td>
+      <td width='155' style='text-align:left;'>
+         <a href='e_01.jsp' target=main>
+         <span>| 리조트 소식</span>
+         </a>
+         <a href='e_02.jsp' target=main>
+         <span>| 이용후기</span>
+         </a>
+      </td>
+   </tr>      
+</table>
+</td>
+</tr>         
+</table>
+</td></table></div></body></html>
